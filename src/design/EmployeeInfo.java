@@ -1,6 +1,6 @@
 package design;
 
-public class EmployeeInfo{
+public class EmployeeInfo implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -17,7 +17,36 @@ public class EmployeeInfo{
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+	public static int calculateEmployeePension(){
+		int total=0;
+		return total;
+	}
+	@Override
+	public int employeeId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public String employeeName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void assignDepartment() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int calculateSalary() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public void benefitLayout() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -43,11 +72,18 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(){
+    public int calculateEmployeeBonus(int salary, String performance){
 		int total=0;
+		if(performance.equals("Best performance.")){
+			total = (int).1*salary;
+		}else if(performance.equals("Average performance")){
+			total = (int).08*salary;
+		}else if(performance.equals("You Need to work hard.")){
+			total = 0;
+		}
 		return total;
 	}
-	
+}
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
 	 * Then it will return the total pension. So you need to implement the logic.
@@ -55,8 +91,3 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
-		int total=0;
-		return total;
-	}
-}

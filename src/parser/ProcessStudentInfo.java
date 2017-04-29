@@ -1,10 +1,14 @@
 package parser;
 
-import org.xml.sax.SAXException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
-import java.util.List;
+
+import org.xml.sax.SAXException;
 
 public class ProcessStudentInfo {
 
@@ -31,32 +35,43 @@ public class ProcessStudentInfo {
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
-				String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
+				String pathSelenium  = "C:\\Users\\BELEE\\workspace\\ExamMarch2017\\src\\parser\\selenium.xml";
+				String pathQtp = "C:\\Users\\BELEE\\workspace\\ExamMarch2017\\src\\parser\\qtp.xml";
 				String tag = "id";
 
 				//Declare a Map with List<String> into it.
-				
+				Map<String,List<String>>map=new LinkedHashMap<String, List<String>>();
 				
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
-				
-				
+				List<Student>seleniumStudent = new ArrayList<Student>();
+				List <Student>qtpStudent = new ArrayList<Student>();
 				
 				//Create XMLReader object.
+				XmlReader xmlFile = new XmlReader ();
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
-
+				seleniumStudent=	xmlFile.parseData(tag, pathSelenium);
+				
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
+					qtpStudent= xmlFile.parseData(tag, pathQtp);
 				
 				//add Selenium ArrayList data into map.
-			
+				
 				//add Qtp ArrayList data into map.
 		
 		      	
 				//Retrieve map data and display output.
-
-				
+				System.out.println("*****QTP students grade point*****\n");
+				for (Student student : qtpStudent) {
+					System.out.println(student);
+					
+				}
+				System.out.println("\n*****Selenium students grade******\n");
+				for (Student student1 : seleniumStudent) {
+					System.out.println(student1);
+					
+				}
 			}
 
 }
