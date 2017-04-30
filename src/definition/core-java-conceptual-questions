@@ -1,80 +1,96 @@
-Please Ans the below Data Structure Questions:
+Please Ans the below core-java Questions:
 
-2.	why do we need data structure?
-Ans: Because data structure is very efficient and perform wide range of functions in java.
+What jdk contains or composed of and define each components?
+Ans: Java Development Kit (JDK) is a bundle of software components that is used to develop Java based applications. JDK is an implementation of either of Java SE, Java EE or Java ME. 
+Java Compiler: Java compiler is javac tool located in /bin folder of the JDK installation directory. The javac tool (accessed using javac command) reads class and interface definitions, written in the Java programming language, and compiles them into bytecode class files. It can also process annotations in Java source files and classes.
+Java Interpreter: Java interpreter is used to interpret the .class Java files that have been compiled by Java compiler (javac).
+Java Disassembler: The javap command is the disassembly tool of JDK that disassembles one or more class files. Its output depends on the options used. The javap prints its output to stdout.
+Java Header File Generator: Java Header File Generator (javah command-line tool) generates C header and source files that are needed to implement native methods. The generated header and source files are used by C programs to reference an object's instance variables from native source code.
+Java Documentation: Java Documentation helps to maintain code. The javadoc tool comes as part of Java Development Kit that parses the declarations and documentation comments in a set of Java source files and produces a corresponding set of HTML pages describing (by default) the public and protected classes, nested classes (but not anonymous inner classes), interfaces, constructors, methods, and fields. 
+Java Debugger: The Java Debugger, jdb, is a simple command-line debugger for Java classes. It is a demonstration of the Java Platform Debugger Architecture that provides inspection and debugging of a local or remote Java Virtual Machine.
+Java Applet Viewer: This is used to view the Java applets. The applet viewer command connects to the documents or resources designated by urls and displays each applet referenced by the documents in its own window.
+What is IDE?
+Ans: An Integrated Development Environment (IDE) is an application that facilitates application development. In general, an IDE is a graphical user interface (GUI)-based workbench designed to aid a developer in building software applications with an integrated environment combined with all the required tools at hand.
+What are the IDEs available in the market to support java?
+Ans:There several kind of IDE (Integrated Development Environment) tool on the market. The three IDEs most often chosen for server-side Java development are IntelliJ IDEA, Eclipse, and NetBeans.
+Explain the entire java life cycle.
+Ans: A Java program is written using either a Text Editor like Textpad or an IDE like Eclipse and is saved as a .java file. (Program.java)
+The .java file is then compiled using Java compiler and a .class file is obtained from it. (Program.class)
+The .class file is now portable and can be used to run this Java program in any platform.
+Class file (Program.class) is interpreted by the JVM installed on a particular platform. JVM is part of the JRE software.
+what is class?
+Ans: Collection of objects is called class. It is a logical entity.
+What is object?
+Ans: Any entity that has state and behavior is known as an object. It can logical or Physical.
+What is the entry point of an application?
+Ans: entry point is where control is transferred from the operating system to a computer program, at which place the processor enters a program or a code fragment and execution begins.
+Why main is static?
+Ans: In Java, main is a static method. This means the method is part of its class and not part of objects. Robots are objects. They are defined by classes, which are like factories for the creation of objects.
+What is the difference between an Interface and Abstract class?
+Ans: •	Abstract class can have abstract and non-abstract methods.	•	Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+•	Abstract class doesn't support multiple inheritance.	•	Interface supports multiple inheritance.
+•	Abstract class can have final, non-final, static and non-static variables.	•	Interface has only static and final variables.
+•	Abstract class can provide the implementation of interface.	•	Interface can't provide the implementation of abstract class.
+•	The abstract keyword is used to declare abstract class.	•	The interface keyword is used to declare interface.
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+Ans: we can not create object of abstract class, We also can not create object from Interface. We can either create subclass to abstract class, or implement the interface.
+what is Access Specifier?
+Ans: Access specifiers are used to control the visibility of members like classes, variables and methods. There are three access specifiers: public, private and protected. 
+What is OOP ? Define each feature of java OOP.
+Ans:Object means a real word entity such as pen, chair, table etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. It simplifies the software development and maintenance by providing some concepts: Object, Class, Inheritance, Polymorphism, Abstraction, Encapsulation and Object.
+Any entity that has state and behavior is known as an object. For example: chair, pen, table, keyboard, bike etc. It can be physical and logical.
+Class: Collection of objects is called class. It is a logical entity.
+Inheritance: when one object acquires all the properties and behaviors of parent object i.e. known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+Polymorphism: when one task is performed by different ways i.e. known as polymorphism. For example: to convince the customer differently, to draw something e.g. shape or rectangle etc.
+In java, we use method overloading and method overriding to achieve polymorphism.
+Abstraction: hiding internal details and showing functionality is known as abstraction. For example: phone call, we don't know the internal processing. In java, we use abstract class and interface to achieve abstraction.
+Encapsulation: binding (or wrapping) code and data together into a single unit is known as encapsulation. For example: capsule, it is wrapped with different medicines.
+Ans: API is the set of classes included with the Java Development Environment. These classes are written using the Java language and run on the JVM. 
+So far, I have used  Applet,   Arraylist,  LinkedList, File,  Integer,   Math,   Scanner,   String,  String Buffer Reader, String File Reader, etc.
+Does java support multiple inheritance?
+Ans: No.
+What is method overloading and when it happens?
+Ans:  Method Overloading is a feature that allows a class to have two or more methods having same name, if their argument lists are different.
+It may happen when  their argument lists are different.
 
-3.	List out the areas in which data structures are applied extensively?
+What is method overriding and when it happens?
+overriding means to override the functionality of an existing method. It will happen when argument lists or return type are same.
 
-Ans: The name of areas are: Compiler Design, Operating System, Database Management System,  Statistical analysis package,Numerical Analysis, Graphics, Artificial Intelligence, Simulation.
+Explain exceptions in java and how to handle it.
+Ans: Exception is a problem that arises during the execution of a program. When an Exception occurs the normal flow of the program is disrupted and the program/Application terminates abnormally, which is not recommended, therefore, these exceptions are to be handled.
 
-Ans: Array is a fixed-size sequential collection of elements of the same type.
+What is static keyword in java? How it has been used in variables and methods ?
+Ans:  The static keyword in java is used for memory management mainly. We can apply java static keyword with variables, methods, blocks and nested class. The static keyword belongs to the class than instance of the class.
 
-4.	what is the difference between the Array and ArrayList?
-Ans: An array is basic functionality provided by Java. ArrayList is part of collection framework in Java.Therefore array members are accessed using [], while ArrayList has a set of methods to access elements and modify them.
+What is final and how it has been used variables and methods?
+Ans: Final is a keyword or reserved word in java and can be applied to member variables, methods, class and local variables in Java. Once we make a reference final, it is not allowed to change.
 
-5.	what is LinkedList?
-Ans: LinkedList is an implementation of List interface. It inherits the AbstractList class and implements List and Dequeue interfaces.
+What is final, finally and finalize?
+Ans:   Final is a keyword.It is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.	
+Finally is a block. It is used to place important code, it will be executed whether exception is handled or not.	
+Finalize is a method. Itis used to perform clean up processing just before object is garbage collected.
 
-6.	what is queue?
-7.	Ans The java.util.Queue is a subtype of java.util.Collection interface. It supports the insert and remove operations using a first-in first-out (FIFO) discipline. By convention, the queue insert operation enqueue and the remove operation dequeue.
+What is a constructor ?
+Ans: A constructor in Java is a block of code similar to a method that's called when an instance of an object is created. 
 
-8.	what is stack?
-Ans: A stack is a data structure that allows data to be inserted (a 'push' operation), and removed (a 'pop' operation).Many stacks also support a read ahead (a 'peek' operation), which reads data without removing it.
+What is "this" keyword in java ?
+Ans: It is a reference variable that refers to the current object.
 
-9.	what is FIFO and LIFO?
-Ans: In computer programming, FIFO (first-in, first-out) is an approach to handling program work requests from queues or stacks so that the oldest request is handled next. LIFO (last-in, first-out) is an approach in which the most recent request is handled next and the oldest request doesn't get handled until it is the only remaining request on the queue (or in the stack).
+What is "super" keyword in java?
+Ans:  "super" keyword is used inside a sub-class method definition to call a method defined in the super class.
+What is JVM stand for ?
+Ans: Java Virtual Machine (JVM) is a program that runs pre-compiled Java programs, which mean JVM executes class files (byte-code) and produces output.
+What version of java are you using?
+Ans :  java version "1.8.0_131". 
+What is JAR stand for ?
+Ans:JAR stands for Java ARchive. It's a file format based on the popular ZIP file format and is used for aggregating many files into one. 
+What is compile time and run time?
+Asn: The source code must be compiled into machine code in order to become and executable program. This compilation process is referred to as compile time. 
+What is heap?
+Ans: The heap is the runtime data area from which memory for all class instances and arrays is allocated.
 
-10.	what is the order of complexity?
-Ans: Algorithmic complexity is concerned about how fast or slow particular algorithm performs. The goal of order complexity is to organize the algorithms according to their performances.
-11.	what is the best case to search an element from an array?
-Ans: In the best case analysis, we calculate lower bound on running time of an algorithm. The best case for a simple linear search on a list occurs when the desired element is the first element of the list. If the targeted element is in the beginning of the array, then this search would require only a single comparison which is known as the best case.
+How java manage it's memory?
+Ans: Memory management is the process of allocating new objects and removing unused objects to make space for those new object allocations. The memory will be managed by  object allocation and garbage collection process.
 
-12.	what is the worst case to search an element from an array?
-Ans: In the worst case analysis, we calculate upper bound on running time of an algorithm. when the element to be searched (x in the above code) is not present in the array. When x is not present, the search() functions compares it with all the elements of array  one by one.
-
-13.	what is tree in data structure?
-Ans: A tree data structure is a powerful tool for organizing data objects based on keys. It is equally useful for organizing multiple data objects in terms of hierarchical relationships.
-
-14.	what is graph in data structure?
-Ans:  a graph is an object consisting of a vertex set and an edge set.
-15.	what is the difference between the HashTable and HashMap?
-Ans: •	HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code.	•	Hashtable is synchronized. It is thread-safe and can be shared with many threads.
-•	HashMap allows one null key and multiple null values.	•	Hashtable doesn't allow any null key or value.
-•	HashMap is a new class introduced in JDK 1.2.	•	Hashtable is a legacy class.
-•	HashMap is fast.	•	Hashtable is slow.
-•	We can make the HashMap as synchronized by calling this code
-Map m = Collections.synchronizedMap(hashMap);	•	Hashtable is internally synchronized and can't be unsynchronized.
-•	HashMap is traversed by Iterator.	•	Hashtable is traversed by Enumerator and Iterator.
-•	Iterator in HashMap is fail-fast.	•	Enumerator in Hashtable is not fail-fast.
-•	HashMap inherits AbstractMap class.	•	Hashtable inherits Dictionary class.
-What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
-Ans:  The major data structures used are as follows:
-· RDBMS – Array (i.e. Array of structures), Network data model – Graph, Hierarchical data model – Trees
-16.	How HashMap works in java?
-Ans: HashMap maintains key and value pairs and often denoted as HashMap<Key, Value> or HashMap<K, V>. HashMap implements Map interface. HashMap is similar to Hashtable with two exceptions – 
-HashMap methods are unsynchornized and it allows null key and null values unlike Hashtable.
-17.What is ArrayIndexOutOfBoundsException in java? When it occurs?
-It is indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array. 
- It will occur when someone try to access an array index that doesn't exist,or try to access outside the bounds of the array.
-What are the different ways of copying an array into another array?
-Ans: in Java there are two possibilities to copy values from an array to another:
-1. an own implementation of an copying algorithm, and 2.use of API functions.
-What is difference between an array and a linked list?
-Ans : Linked list provides following two advantages over arrays:
- 1)	Dynamic size
- 2)	Ease of insertion/deletion    
-What is DFS and BFS?
-Anser: Breadth First Search (BFS) and Depth First Search (DFS) are the two popular algorithms. The aim of DFS algorithm is to traverse the graph in such a way that it tries to go far from the root node. 
-Stack is used in the implementation of the depth first search.   The aim of BFS algorithm is to traverse the graph as close as possible to the root node. Queue is used in the implementation of the breadth first search
-21.	What is Recursion?
-Ans: Recursion in java is a process in which a method calls itself continuously. A method in java that calls itself is called recursive method.
-22.	What is Big-(O)-notation?
-Ans:  A theoretical measure of the execution of an algorithm, usually the time or memory needed, given the problem size n, which is usually the number of items.
-23.	Outlined different kind of sorting algorithm with time complexity?
-Ans: The sorting algorithm with time complexity are : Bucket sort, Bubble sort, Insertion sort, Selection sort, Heapsort, Mergesort
-24.	Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
-25.	a)In terms of Accessing element.
-26.	b)In terms of Inserting element.
-27.	c)In terms of Searching element.
-28.	d)In terms of Removing element.
-
+What is the difference between String, StringBuffer and StringBuilder?
+Ans: String, or  String class is used to manipulate character strings that cannot be changedStringBuffer is synchronized( which means it is thread safe and hence you can use it when you implement threads for your methods) whereas StringBuilder is not synchronized.
