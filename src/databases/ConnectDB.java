@@ -307,7 +307,7 @@ public class ConnectDB {
 		}
 	}
 
-	public static List<User> readFromMySql()throws IOException, SQLException, ClassNotFoundException{
+	public static List<User> readFromMySqlLowestData()throws IOException, SQLException, ClassNotFoundException{
 		List<User> list = new ArrayList<>();
 		User user = null;
 		try{
@@ -348,13 +348,13 @@ public class ConnectDB {
 		 */
 
 	}
-	public void InsertDataFromArryToMySqlLowestNumber(int [] ArrayData,String tableName, String columnName)
+	public void InsertDataFromArryToMySqlLowestData(int [] ArrayData,String tableName, String columnName)
 	{
 		try {
 			connectToMySql();
 			ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
 			ps.executeUpdate();
-			ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`SortingNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+			ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`column_lowestNumber` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
 			ps.executeUpdate();
 			for(int n=0; n<ArrayData.length; n++){
 				ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
@@ -365,11 +365,11 @@ public class ConnectDB {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
+	System.out.println(e.getMessage());		
+} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
-}
+	}
 
 
