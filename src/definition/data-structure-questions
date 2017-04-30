@@ -36,30 +36,44 @@ Ans: In the worst case analysis, we calculate upper bound on running time of an 
 Ans: A tree data structure is a powerful tool for organizing data objects based on keys. It is equally useful for organizing multiple data objects in terms of hierarchical relationships.
 
 14.	what is graph in data structure?
-
+Ans:  a graph is an object consisting of a vertex set and an edge set.
 15.	what is the difference between the HashTable and HashMap?
-
+Ans: •	HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code.	•	Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+•	HashMap allows one null key and multiple null values.	•	Hashtable doesn't allow any null key or value.
+•	HashMap is a new class introduced in JDK 1.2.	•	Hashtable is a legacy class.
+•	HashMap is fast.	•	Hashtable is slow.
+•	We can make the HashMap as synchronized by calling this code
+Map m = Collections.synchronizedMap(hashMap);	•	Hashtable is internally synchronized and can't be unsynchronized.
+•	HashMap is traversed by Iterator.	•	Hashtable is traversed by Enumerator and Iterator.
+•	Iterator in HashMap is fail-fast.	•	Enumerator in Hashtable is not fail-fast.
+•	HashMap inherits AbstractMap class.	•	Hashtable inherits Dictionary class.
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
-
+Ans:  The major data structures used are as follows:
+· RDBMS – Array (i.e. Array of structures), Network data model – Graph, Hierarchical data model – Trees
 16.	How HashMap works in java?
-
-17.	What is ArrayIndexOutOfBoundsException in java? When it occurs?
-
-18.	What are the different ways of copying an array into another array?
-
-19.	What is difference between an array and a linked list?
-
-20.	What is DFS and BFS?
-
+Ans: HashMap maintains key and value pairs and often denoted as HashMap<Key, Value> or HashMap<K, V>. HashMap implements Map interface. HashMap is similar to Hashtable with two exceptions – 
+HashMap methods are unsynchornized and it allows null key and null values unlike Hashtable.
+17.What is ArrayIndexOutOfBoundsException in java? When it occurs?
+It is indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array. 
+ It will occur when someone try to access an array index that doesn't exist,or try to access outside the bounds of the array.
+What are the different ways of copying an array into another array?
+Ans: in Java there are two possibilities to copy values from an array to another:
+1. an own implementation of an copying algorithm, and 2.use of API functions.
+What is difference between an array and a linked list?
+Ans : Linked list provides following two advantages over arrays:
+ 1)	Dynamic size
+ 2)	Ease of insertion/deletion    
+What is DFS and BFS?
+Anser: Breadth First Search (BFS) and Depth First Search (DFS) are the two popular algorithms. The aim of DFS algorithm is to traverse the graph in such a way that it tries to go far from the root node. 
+Stack is used in the implementation of the depth first search.   The aim of BFS algorithm is to traverse the graph as close as possible to the root node. Queue is used in the implementation of the breadth first search
 21.	What is Recursion?
-
+Ans: Recursion in java is a process in which a method calls itself continuously. A method in java that calls itself is called recursive method.
 22.	What is Big-(O)-notation?
-
+Ans:  A theoretical measure of the execution of an algorithm, usually the time or memory needed, given the problem size n, which is usually the number of items.
 23.	Outlined different kind of sorting algorithm with time complexity?
-
+Ans: The sorting algorithm with time complexity are : Bucket sort, Bubble sort, Insertion sort, Selection sort, Heapsort, Mergesort
 24.	Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
 25.	a)In terms of Accessing element.
 26.	b)In terms of Inserting element.
 27.	c)In terms of Searching element.
 28.	d)In terms of Removing element.
-
